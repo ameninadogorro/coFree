@@ -10,12 +10,18 @@
 		4C791E98291406C2009FF480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C791E97291406C2009FF480 /* AppDelegate.swift */; };
 		4C791E9A291406C2009FF480 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C791E99291406C2009FF480 /* SceneDelegate.swift */; };
 		4C791E9C291406C2009FF480 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C791E9B291406C2009FF480 /* ViewController.swift */; };
-		4C791E9F291406C2009FF480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C791E9D291406C2009FF480 /* Main.storyboard */; };
 		4C791EA1291406C3009FF480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C791EA0291406C3009FF480 /* Assets.xcassets */; };
 		4C791EA4291406C3009FF480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C791EA2291406C3009FF480 /* LaunchScreen.storyboard */; };
 		4C791EAF291406C3009FF480 /* MakeItGreatChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C791EAE291406C3009FF480 /* MakeItGreatChallengeTests.swift */; };
 		4C791EB9291406C3009FF480 /* MakeItGreatChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C791EB8291406C3009FF480 /* MakeItGreatChallengeUITests.swift */; };
 		4C791EBB291406C3009FF480 /* MakeItGreatChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C791EBA291406C3009FF480 /* MakeItGreatChallengeUITestsLaunchTests.swift */; };
+		7EA277AA293532A100AC26BD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA277A9293532A100AC26BD /* Extensions.swift */; };
+		7EA277AD293535C700AC26BD /* BeverageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA277AC293535C700AC26BD /* BeverageModel.swift */; };
+		7EA277B0293536B600AC26BD /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA277AF293536B600AC26BD /* FirstScreen.swift */; };
+		7EA277B22935580100AC26BD /* BeverageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA277B12935580100AC26BD /* BeverageCollectionViewCell.swift */; };
+		7EA277B629358D7600AC26BD /* CenterStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA277B529358D7600AC26BD /* CenterStackView.swift */; };
+		7EA277B82936A5A300AC26BD /* beverage.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EA277B72936A5A300AC26BD /* beverage.json */; };
+		7EA277BA2936B54000AC26BD /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA277B92936B54000AC26BD /* CollectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +46,6 @@
 		4C791E97291406C2009FF480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C791E99291406C2009FF480 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4C791E9B291406C2009FF480 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4C791E9E291406C2009FF480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C791EA0291406C3009FF480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C791EA3291406C3009FF480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C791EA5291406C3009FF480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +54,13 @@
 		4C791EB4291406C3009FF480 /* MakeItGreatChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeItGreatChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C791EB8291406C3009FF480 /* MakeItGreatChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeItGreatChallengeUITests.swift; sourceTree = "<group>"; };
 		4C791EBA291406C3009FF480 /* MakeItGreatChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeItGreatChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7EA277A9293532A100AC26BD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7EA277AC293535C700AC26BD /* BeverageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageModel.swift; sourceTree = "<group>"; };
+		7EA277AF293536B600AC26BD /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
+		7EA277B12935580100AC26BD /* BeverageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageCollectionViewCell.swift; sourceTree = "<group>"; };
+		7EA277B529358D7600AC26BD /* CenterStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterStackView.swift; sourceTree = "<group>"; };
+		7EA277B72936A5A300AC26BD /* beverage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = beverage.json; sourceTree = "<group>"; };
+		7EA277B92936B54000AC26BD /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +111,12 @@
 		4C791E96291406C2009FF480 /* MakeItGreatChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				4C791E97291406C2009FF480 /* AppDelegate.swift */,
-				4C791E99291406C2009FF480 /* SceneDelegate.swift */,
+				7EA277A52935318600AC26BD /* Managers */,
+				7EA277A82935329000AC26BD /* Resources */,
+				7EA277A42935317800AC26BD /* Models */,
+				7EA277AE2935361800AC26BD /* Views */,
+				7EA277AB2935351600AC26BD /* ViewModels */,
 				4C791E9B291406C2009FF480 /* ViewController.swift */,
-				4C791E9D291406C2009FF480 /* Main.storyboard */,
 				4C791EA0291406C3009FF480 /* Assets.xcassets */,
 				4C791EA2291406C3009FF480 /* LaunchScreen.storyboard */,
 				4C791EA5291406C3009FF480 /* Info.plist */,
@@ -125,6 +139,66 @@
 				4C791EBA291406C3009FF480 /* MakeItGreatChallengeUITestsLaunchTests.swift */,
 			);
 			path = MakeItGreatChallengeUITests;
+			sourceTree = "<group>";
+		};
+		7EA277A42935317800AC26BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7EA277AC293535C700AC26BD /* BeverageModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7EA277A52935318600AC26BD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7EA277A82935329000AC26BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C791E97291406C2009FF480 /* AppDelegate.swift */,
+				4C791E99291406C2009FF480 /* SceneDelegate.swift */,
+				7EA277A9293532A100AC26BD /* Extensions.swift */,
+				7EA277B72936A5A300AC26BD /* beverage.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7EA277AB2935351600AC26BD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7EA277B92936B54000AC26BD /* CollectionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7EA277AE2935361800AC26BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EA277B32935881600AC26BD /* BeverageCollection */,
+				7EA277B42935887E00AC26BD /* Stack */,
+				7EA277AF293536B600AC26BD /* FirstScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7EA277B32935881600AC26BD /* BeverageCollection */ = {
+			isa = PBXGroup;
+			children = (
+				7EA277B12935580100AC26BD /* BeverageCollectionViewCell.swift */,
+			);
+			path = BeverageCollection;
+			sourceTree = "<group>";
+		};
+		7EA277B42935887E00AC26BD /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				7EA277B529358D7600AC26BD /* CenterStackView.swift */,
+			);
+			path = Stack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +307,7 @@
 			files = (
 				4C791EA4291406C3009FF480 /* LaunchScreen.storyboard in Resources */,
 				4C791EA1291406C3009FF480 /* Assets.xcassets in Resources */,
-				4C791E9F291406C2009FF480 /* Main.storyboard in Resources */,
+				7EA277B82936A5A300AC26BD /* beverage.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +332,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EA277B0293536B600AC26BD /* FirstScreen.swift in Sources */,
+				7EA277AA293532A100AC26BD /* Extensions.swift in Sources */,
+				7EA277AD293535C700AC26BD /* BeverageModel.swift in Sources */,
 				4C791E9C291406C2009FF480 /* ViewController.swift in Sources */,
 				4C791E98291406C2009FF480 /* AppDelegate.swift in Sources */,
+				7EA277B22935580100AC26BD /* BeverageCollectionViewCell.swift in Sources */,
+				7EA277BA2936B54000AC26BD /* CollectionViewModel.swift in Sources */,
+				7EA277B629358D7600AC26BD /* CenterStackView.swift in Sources */,
 				4C791E9A291406C2009FF480 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +377,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4C791E9D291406C2009FF480 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C791E9E291406C2009FF480 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4C791EA2291406C3009FF480 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -437,11 +509,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeItGreatChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -464,11 +536,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 44U668YQTW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeItGreatChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

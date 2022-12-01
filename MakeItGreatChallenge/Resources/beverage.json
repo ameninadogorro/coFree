@@ -1,0 +1,35 @@
+{
+    "beverages": [
+        {
+            "image": "coffee-beans",
+            "name":"Coffee",
+            "caffeineLevel": 12,
+        },
+        {
+            "image": "black-tea",
+            "name": "Black Tea",
+            "caffeineLevel": 13,
+        },
+        {
+            "image": "green-tea",
+            "name":"Green Tea",
+            "caffeineLevel": 14,
+        },
+        {
+            "image": "coffee-beans",
+            "name":"White Tea",
+            "caffeineLevel": 15,
+        },
+        {
+            "image": "coffee-mug",
+            "name":"Yerba Tea",
+            "caffeineLevel": 16,
+        },
+        {
+            "image": "green-tea",
+            "name":"Matcha Tea",
+            "caffeineLevel": 17,
+        },
+    ]
+}
+
