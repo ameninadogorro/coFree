@@ -8,7 +8,16 @@
 import Foundation
 
 class CollectionViewModel {
-
+//alterei aqui
+    var value: Int = 100
+    
+    func returnToLastValue() -> Int {
+        if (self.value - 1) >= 0 {
+            self.value -= 1
+        }
+        return self.value
+    }
+    
     // MARK: FOR LOCAL JSON
     func readLocalFile(name: String) -> Data? {
         do {

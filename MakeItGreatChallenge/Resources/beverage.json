@@ -3,7 +3,7 @@
         {
             "image": "coffee-beans",
             "name":"Coffee",
-            "caffeineLevel": 12,
+            "caffeineLevel": 20,
         },
         {
             "image": "black-tea",
