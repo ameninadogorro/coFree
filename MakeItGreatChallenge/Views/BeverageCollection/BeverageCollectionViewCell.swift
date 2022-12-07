@@ -9,7 +9,6 @@ import UIKit
 
 class BeverageCollectionViewCell: UICollectionViewCell {
     static let identifier = "beverageOption"
-    var beverageUn: Int = 0
 
     let beverageCircleView: UIView = {
         let view = UIView()
@@ -36,7 +35,8 @@ class BeverageCollectionViewCell: UICollectionViewCell {
 
     let beverageMeasureLabel: UILabel = {
         let label = UILabel()
-        label.text = "100ml"
+        label.textAlignment = .center
+        label.text = "0"
         label.textColor = .lightGray
         label.font = UIFont.preferredFont(forTextStyle: .body)
         label.contentMode = .scaleAspectFit
@@ -48,8 +48,10 @@ class BeverageCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "name"
 //        label.font = UIFont.preferredFont(forTextStyle: .title3)
+        label.textAlignment = .center
         label.textColor = .label
         label.contentMode = .scaleAspectFit
+        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -66,10 +68,6 @@ class BeverageCollectionViewCell: UICollectionViewCell {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    func increment() {
-        self.beverageUn += 1
     }
 
     func setupViews() {
@@ -90,7 +88,7 @@ class BeverageCollectionViewCell: UICollectionViewCell {
             beverageMeasureLabel.centerXAnchor.constraint(equalTo: beverageCircleView.centerXAnchor),
             beverageMeasureLabel.bottomAnchor.constraint(greaterThanOrEqualTo: beverageCircleView.bottomAnchor),
             beverageMeasureLabel.topAnchor.constraint(equalTo: beverageImageView.bottomAnchor),
-            beverageMeasureLabel.widthAnchor.constraint(equalTo: beverageCircleView.widthAnchor, multiplier: 1/2)
+            beverageMeasureLabel.widthAnchor.constraint(equalTo: beverageCircleView.widthAnchor, multiplier: 0.9)
         ])
 
         addSubview(beverageCircleView)
@@ -98,7 +96,7 @@ class BeverageCollectionViewCell: UICollectionViewCell {
 
             beverageCircleView.centerXAnchor.constraint(equalTo: centerXAnchor),
             beverageCircleView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            beverageCircleView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8),
+            beverageCircleView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.65),
             beverageCircleView.widthAnchor.constraint(equalTo: beverageCircleView.heightAnchor)
 
         ])
@@ -109,7 +107,7 @@ class BeverageCollectionViewCell: UICollectionViewCell {
             beverageNameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             beverageNameLabel.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: beverageCircleView.bottomAnchor, multiplier: 0.4),
             beverageNameLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
-
+            beverageNameLabel.heightAnchor.constraint(greaterThanOrEqualTo: self.heightAnchor, multiplier: 0.25)
         ])
     }
 }

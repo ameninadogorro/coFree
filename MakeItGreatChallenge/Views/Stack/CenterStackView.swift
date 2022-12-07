@@ -30,7 +30,7 @@ class CenterStackView: UIView {
 
     let caffeineLevelLabel: UILabel = {
         let label = UILabel()
-        label.text = "100ml"
+        label.text = "0 ml"
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .title1)
         label.translatesAutoresizingMaskIntoConstraints = false
