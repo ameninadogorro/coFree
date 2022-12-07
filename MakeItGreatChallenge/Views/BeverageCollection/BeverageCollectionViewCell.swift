@@ -75,7 +75,7 @@ class BeverageCollectionViewCell: UICollectionViewCell {
         beverageCircleView.addSubview(beverageImageView)
         NSLayoutConstraint.activate([
 
-            beverageImageView.widthAnchor.constraint(equalTo: beverageCircleView.widthAnchor, multiplier: 0.3),
+            beverageImageView.widthAnchor.constraint(equalTo: beverageCircleView.widthAnchor, multiplier: 0.4),
             beverageImageView.heightAnchor.constraint(equalTo: beverageImageView.widthAnchor),
             beverageImageView.centerXAnchor.constraint(equalTo: beverageCircleView.centerXAnchor),
             beverageImageView.centerYAnchor.constraint(equalTo: beverageCircleView.centerYAnchor)

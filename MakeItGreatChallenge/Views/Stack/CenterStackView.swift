@@ -20,10 +20,10 @@ class CenterStackView: UIView {
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .white
-        imageView.layer.borderColor = UIColor.systemPink.withAlphaComponent(0.2).cgColor
-        imageView.layer.borderWidth = 5.0
+//        imageView.layer.borderColor = UIColor.systemPink.withAlphaComponent(0.2).cgColor
+//        imageView.layer.borderWidth = 5.0
         imageView.image = UIImage(named: "coffee-mug")
-        imageView.contentMode = .center
+        imageView.contentMode = .bottom
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -48,7 +48,6 @@ class CenterStackView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-
         setupConstraints()
     }
 
