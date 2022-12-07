@@ -10,7 +10,9 @@ import UIKit
 class ViewController: UIViewController {
 
     let firstScreen = FirstScreen()
+
     let viewModel = CollectionViewModel()
+    var drankRowIndexes: [Int] = []
 
     override func loadView() {
         self.view = firstScreen
@@ -22,11 +24,8 @@ class ViewController: UIViewController {
         configureCalendar()
         firstScreen.collection.delegate = self
         firstScreen.collection.dataSource = self
-        
-             
-
    }
-    //alterei aqui
+
     private func configureItems(){
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "arrowshape.turn.up.backward.fill"),
@@ -34,64 +33,67 @@ class ViewController: UIViewController {
             target: self,
             action: #selector(returnToLastValue)
         )
-          navigationItem.leftBarButtonItem?.tintColor = .black
+        navigationItem.leftBarButtonItem?.tintColor = .black
     }
-    
-    private func returnLastValue() {
-    
-    }
-    
+
     private func configureCalendar(){
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "calendar"),
             style: .done,
             target: nil,
             action: nil
-            
         )
         navigationItem.rightBarButtonItem?.tintColor = .black
-
     }
-    // Alterei aqui
+
     @objc func returnToLastValue() {
-        let newValue = viewModel.returnToLastValue()
-        firstScreen.stackView.caffeineLevelLabel.text = "\(newValue)ml"
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        undo()
+    }
+
+    func undo() {
+        if let row = drankRowIndexes.popLast() {
+            viewModel.bevs[row].caffeineIngested -= 1 * viewModel.bevs[row].caffeineLevel
+            reloadView()
+        }
+    }
+
+    func reloadView() {
+        firstScreen.collection.reloadData()
+        firstScreen.stackView.caffeineLevelLabel.text = "\(viewModel.bevs.map(\.caffeineIngested).reduce(0, +)) mg"
     }
 }
 
 extension ViewController: UICollectionViewDataSource {
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.beverages().count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BeverageCollectionViewCell.identifier,
-                                                            for: indexPath) as? BeverageCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BeverageCollectionViewCell.identifier,for: indexPath) as? BeverageCollectionViewCell else { return UICollectionViewCell() }
+
         let beverages = viewModel.beverages()
-        cell.beverageNameLabel.text = beverages[indexPath.row].name
-        cell.beverageImageView.image = UIImage(named: beverages[indexPath.row].image)
-        cell.beverageMeasureLabel.text = "\(beverages[indexPath.row].caffeineLevel) ml"
+        let currentBeverage = beverages[indexPath.row]
+        cell.beverageNameLabel.text = "\(currentBeverage.name)\n(\(currentBeverage.mililiters) ml)"
+        cell.beverageImageView.image = UIImage(named: currentBeverage.image)
+        cell.beverageMeasureLabel.text = "\(currentBeverage.caffeineIngested / currentBeverage.caffeineLevel) cups"
+
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let cell = collectionView.cellForItem(at: indexPath)
-        guard let cell = collectionView.cellForItem(at: indexPath) as? BeverageCollectionViewCell else { return }
-        cell.increment()
-        cell.beverageMeasureLabel.text = String(cell.beverageUn)
-        let haptic = UIImpactFeedbackGenerator(style: .soft)
-        haptic.impactOccurred()
-//        print(cell.beverageUn)
+        UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+        viewModel.bevs[indexPath.row].caffeineIngested += viewModel.bevs[indexPath.row].caffeineLevel
+        reloadView()
+
+        drankRowIndexes.append(indexPath.row)
     }
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-        return CGSize(width: collectionView.frame.height,
+        return CGSize(width: collectionView.frame.height * 0.75,
                       height: collectionView.frame.height)
     }
 }
