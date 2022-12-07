@@ -19,16 +19,7 @@ class FirstScreen: UIView {
         collection.register(BeverageCollectionViewCell.self, forCellWithReuseIdentifier: BeverageCollectionViewCell.identifier)
         collection.translatesAutoresizingMaskIntoConstraints = false
         return collection
-        
-
-        
     }()
-    
-//private func configureItems(){
-//        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: nil)
-//    }
-    
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,8 +51,7 @@ class FirstScreen: UIView {
             collection.topAnchor.constraint(equalTo: stackView.bottomAnchor),
             collection.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor),
             collection.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor),
-            collection.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 1/4)
-            
+            collection.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 1/3)
         ])
     }
 }

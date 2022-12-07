@@ -76,7 +76,7 @@ extension ViewController: UICollectionViewDataSource {
         let currentBeverage = beverages[indexPath.row]
         cell.beverageNameLabel.text = "\(currentBeverage.name)\n(\(currentBeverage.mililiters) ml)"
         cell.beverageImageView.image = UIImage(named: currentBeverage.image)
-        cell.beverageMeasureLabel.text = "\(currentBeverage.caffeineIngested / currentBeverage.caffeineLevel) cups"
+        cell.beverageMeasureLabel.text = "\(currentBeverage.caffeineIngested / currentBeverage.caffeineLevel) 🥛"
 
         return cell
     }

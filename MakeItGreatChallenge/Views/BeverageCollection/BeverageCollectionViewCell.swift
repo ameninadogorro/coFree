@@ -58,7 +58,7 @@ class BeverageCollectionViewCell: UICollectionViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        beverageCircleView.layer.cornerRadius = beverageCircleView.frame.height/2
+        beverageCircleView.layer.cornerRadius = beverageCircleView.frame.height/3
     }
 
     override init(frame: CGRect) {
