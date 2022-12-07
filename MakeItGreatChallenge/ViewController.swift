@@ -18,9 +18,45 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureItems()
+        configureCalendar()
         firstScreen.collection.delegate = self
         firstScreen.collection.dataSource = self
+        
+             
 
+   }
+    //alterei aqui
+    private func configureItems(){
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "arrowshape.turn.up.backward.fill"),
+            style: .done,
+            target: self,
+            action: #selector(returnToLastValue)
+        )
+          navigationItem.leftBarButtonItem?.tintColor = .black
+    }
+    
+    private func returnLastValue() {
+    
+    }
+    
+    private func configureCalendar(){
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "calendar"),
+            style: .done,
+            target: nil,
+            action: nil
+            
+        )
+        navigationItem.rightBarButtonItem?.tintColor = .black
+
+    }
+    // Alterei aqui
+    @objc func returnToLastValue() {
+        let newValue = viewModel.returnToLastValue()
+        firstScreen.stackView.caffeineLevelLabel.text = "\(newValue)ml"
     }
 }
 
