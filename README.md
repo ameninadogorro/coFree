@@ -3,7 +3,7 @@
 <table border="0">
   <tr>
     <td>
-    <h3> CoFree</h3>
+    <h3> CoFree☕️</h3>
 <p>Um app para controlar o consumo de cafeina. </p> 
 <p> <p>
 <p> REGISTREA QUANTIDADE DE CAFEINA CONSUMIDA</p>
