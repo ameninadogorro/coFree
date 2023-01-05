@@ -6,9 +6,10 @@
     <h3> CoFree☕️</h3>
 <p>Um app para controlar o consumo de cafeina. </p> 
 <p> <p>
-<p> REGISTREA QUANTIDADE DE CAFEINA CONSUMIDA</p>
-<p> TENHA O HISTÓRICO DE DIAS REGISTRADOS NO APP</p>
-<p> ACOMPANHE O SEU PROGRESSO EM RELAÇÃO A REDUÇÃODE CAFEÍNA</p>
+<p> Algumas das funcionalidades do app sao: <p>
+<p> Registre a quantidade de cafeina consumida</p>
+<p> Tenha o historico de dias registrados no app</p>
+<p> Acompanhe o seu progresso em relacao a de reducao de cafeina</p>
     </td>
     <td>
     <img src="agr.png">
