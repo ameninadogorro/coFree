@@ -4,7 +4,7 @@
   <tr>
     <td>
     <h3> CoFree☕️</h3>
-<p>Um app para controlar o consumo de cafeina. </p> 
+<p>Um app com o intuito de ajudar a controlar o consumo de cafeina. </p> 
 <p> <p>
 <p> Algumas das funcionalidades do app sao: <p>
 <p> Registre a quantidade de cafeina consumida</p>
