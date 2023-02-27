@@ -51,7 +51,8 @@ class BeverageCollectionViewCell: UICollectionViewCell {
         label.textAlignment = .center
         label.textColor = .label
         label.contentMode = .scaleAspectFit
-        label.numberOfLines = 2
+        label.numberOfLines = 5
+        label.lineBreakMode = .byClipping
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

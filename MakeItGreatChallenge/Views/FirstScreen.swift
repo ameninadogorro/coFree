@@ -48,7 +48,7 @@ class FirstScreen: UIView {
             stackView.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor),
             stackView.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor),
 
-            collection.topAnchor.constraint(equalTo: stackView.bottomAnchor),
+            collection.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -90),
             collection.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor),
             collection.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor),
             collection.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 1/3)

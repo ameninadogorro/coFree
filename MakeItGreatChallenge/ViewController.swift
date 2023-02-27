@@ -35,15 +35,22 @@ class ViewController: UIViewController {
         )
         navigationItem.leftBarButtonItem?.tintColor = .black
     }
-
+    
     private func configureCalendar(){
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "calendar"),
             style: .done,
-            target: nil,
-            action: nil
+            target: self,
+            action: #selector(configureSheet)
         )
         navigationItem.rightBarButtonItem?.tintColor = .black
+    }
+    
+    @objc func configureSheet(){
+        let vc = SheetViewController()
+        let navVC = UINavigationController(rootViewController: vc)
+
+        navigationController?.present(navVC,animated: true)
     }
 
     @objc func returnToLastValue() {

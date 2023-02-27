@@ -1,0 +1,47 @@
+{
+    "beverages": [
+        {
+            "image": "coffee-beans",
+            "name":"Coffee",
+            "caffeineLevel": 80,
+            "mililiters": 250
+        },
+        {
+            "image": "black-tea",
+            "name": "Black Tea",
+            "caffeineLevel": 42,
+            "mililiters": 200
+        },
+        {
+            "image": "green-tea",
+            "name":"Green Tea",
+            "caffeineLevel": 45,
+            "mililiters": 200
+        },
+        {
+            "image": "yerba-tea",
+            "name":"Yerba Tea",
+            "caffeineLevel": 40,
+            "mililiters": 200
+        },
+        {
+            "image": "energy-can",
+            "name":"Energy Drink",
+            "caffeineLevel": 170,
+            "mililiters": 473
+        },
+        {
+            "image": "green-tea",
+            "name":"Matcha Tea",
+            "caffeineLevel": 64,
+            "mililiters": 200
+        },
+        {
+            "image": "kombucha",
+            "name":"Kombucha",
+            "caffeineLevel": 24,
+            "mililiters": 200
+        },
+    ]
+}
+
