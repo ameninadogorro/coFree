@@ -33,6 +33,8 @@ class ViewController: UIViewController {
             target: self,
             action: #selector(returnToLastValue)
         )
+        navigationItem.leftBarButtonItem?.accessibilityLabel = "Desfazer"
+        navigationItem.leftBarButtonItem?.accessibilityHint = "Clique aqui para retirar o ultimo valor adicionado"
         navigationItem.leftBarButtonItem?.tintColor = .black
     }
     
@@ -44,6 +46,7 @@ class ViewController: UIViewController {
             action: #selector(configureSheet)
         )
         navigationItem.rightBarButtonItem?.tintColor = .black
+        navigationItem.rightBarButtonItem?.accessibilityHint = "Clique aqui para ver seu histórico de cafeína ingerida"
     }
     
     @objc func configureSheet(){
@@ -68,6 +71,8 @@ class ViewController: UIViewController {
     func reloadView() {
         firstScreen.collection.reloadData()
         firstScreen.stackView.caffeineLevelLabel.text = "\(viewModel.bevs.map(\.caffeineIngested).reduce(0, +)) mg"
+        firstScreen.stackView.caffeineLevelLabel.accessibilityLabel = " \(firstScreen.stackView.caffeineLevelLabel.text ?? "Erro") de cafeína ingerida hoje"
+        //        label.accessibilityLabel = "\(label.text) Quantidade de cafeína total"
     }
 }
 
@@ -84,6 +89,12 @@ extension ViewController: UICollectionViewDataSource {
         cell.beverageNameLabel.text = "\(currentBeverage.name)\n(\(currentBeverage.mililiters) ml)"
         cell.beverageImageView.image = UIImage(named: currentBeverage.image)
         cell.beverageMeasureLabel.text = "\(currentBeverage.caffeineIngested / currentBeverage.caffeineLevel) 🥛"
+        cell.beverageMeasureLabel.accessibilityLabel = "\(currentBeverage.caffeineIngested / currentBeverage.caffeineLevel) copos de \(currentBeverage.name) com \(currentBeverage.mililiters) ml"
+        cell.beverageMeasureLabel.accessibilityTraits.remove(.staticText)
+        cell.beverageMeasureLabel.accessibilityTraits.insert(.button)
+        cell.beverageNameLabel.accessibilityElementsHidden = true
+//        cell.beverageMeasureLabel.accessibilityLanguage = "eng"
+        cell.beverageMeasureLabel.accessibilityHint = "Ao clicar aqui será adicionado o número de cafeína ao total do dia, passe para frente para mais opções"
 
         return cell
     }
