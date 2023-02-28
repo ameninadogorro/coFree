@@ -39,7 +39,7 @@ class CenterStackView: UIView {
 
     let minorLabel: UILabel = {
         let label = UILabel()
-        label.text = "caffeine ingested"
+        label.text = "Cafeína Ingerida".Localized()
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .headline)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -72,4 +72,15 @@ class CenterStackView: UIView {
     }
 
 
+}
+
+
+extension String {
+    func Localized() -> String {
+        return NSLocalizedString(self,
+                                 tableName: "Localizable",
+                                 bundle: .main,
+                                 value: self,
+                                 comment: self)
+    }
 }

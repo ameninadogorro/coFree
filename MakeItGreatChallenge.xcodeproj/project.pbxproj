@@ -22,6 +22,8 @@
 		7EA277B629358D7600AC26BD /* CenterStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA277B529358D7600AC26BD /* CenterStackView.swift */; };
 		7EA277B82936A5A300AC26BD /* beverage.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EA277B72936A5A300AC26BD /* beverage.json */; };
 		7EA277BA2936B54000AC26BD /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA277B92936B54000AC26BD /* CollectionViewModel.swift */; };
+		DD563CB229AE2438003B972B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD563CB429AE2438003B972B /* Localizable.strings */; };
+		DD563CBA29AE25E2003B972B /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD563CB929AE25E2003B972B /* SheetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,14 @@
 		7EA277B529358D7600AC26BD /* CenterStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterStackView.swift; sourceTree = "<group>"; };
 		7EA277B72936A5A300AC26BD /* beverage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = beverage.json; sourceTree = "<group>"; };
 		7EA277B92936B54000AC26BD /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
+		DD563CAE29AE205F003B972B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		DD563CAF29AE206D003B972B /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		DD563CB329AE2438003B972B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD563CB529AE244C003B972B /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		DD563CB629AE2474003B972B /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DD563CB729AE2476003B972B /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DD563CB829AE2477003B972B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD563CB929AE25E2003B972B /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +127,8 @@
 				7EA277AE2935361800AC26BD /* Views */,
 				7EA277AB2935351600AC26BD /* ViewModels */,
 				4C791E9B291406C2009FF480 /* ViewController.swift */,
+				DD563CB929AE25E2003B972B /* SheetViewController.swift */,
+				DD563CB429AE2438003B972B /* Localizable.strings */,
 				4C791EA0291406C3009FF480 /* Assets.xcassets */,
 				4C791EA2291406C3009FF480 /* LaunchScreen.storyboard */,
 				4C791EA5291406C3009FF480 /* Info.plist */,
@@ -287,6 +299,9 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				"en-GB",
+				"pt-BR",
 			);
 			mainGroup = 4C791E8B291406C2009FF480;
 			productRefGroup = 4C791E95291406C2009FF480 /* Products */;
@@ -306,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C791EA4291406C3009FF480 /* LaunchScreen.storyboard in Resources */,
+				DD563CB229AE2438003B972B /* Localizable.strings in Resources */,
 				4C791EA1291406C3009FF480 /* Assets.xcassets in Resources */,
 				7EA277B82936A5A300AC26BD /* beverage.json in Resources */,
 			);
@@ -338,6 +354,7 @@
 				4C791E9C291406C2009FF480 /* ViewController.swift in Sources */,
 				4C791E98291406C2009FF480 /* AppDelegate.swift in Sources */,
 				7EA277B22935580100AC26BD /* BeverageCollectionViewCell.swift in Sources */,
+				DD563CBA29AE25E2003B972B /* SheetViewController.swift in Sources */,
 				7EA277BA2936B54000AC26BD /* CollectionViewModel.swift in Sources */,
 				7EA277B629358D7600AC26BD /* CenterStackView.swift in Sources */,
 				4C791E9A291406C2009FF480 /* SceneDelegate.swift in Sources */,
@@ -381,8 +398,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				4C791EA3291406C3009FF480 /* Base */,
+				DD563CAE29AE205F003B972B /* ar */,
+				DD563CAF29AE206D003B972B /* en-GB */,
+				DD563CB529AE244C003B972B /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DD563CB429AE2438003B972B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD563CB329AE2438003B972B /* ar */,
+				DD563CB629AE2474003B972B /* en-GB */,
+				DD563CB729AE2476003B972B /* pt-BR */,
+				DD563CB829AE2477003B972B /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -392,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -452,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
