@@ -13,6 +13,8 @@ class ViewController: UIViewController {
 
     let viewModel = CollectionViewModel()
     var drankRowIndexes: [Int] = []
+    let datePicker = UIDatePicker(frame: CGRect(x: 10, y: 10, width: 150, height: 150))
+    @objc var dateSelected: Date = Date()
 
     override func loadView() {
         self.view = firstScreen
@@ -24,6 +26,24 @@ class ViewController: UIViewController {
         configureCalendar()
         firstScreen.collection.delegate = self
         firstScreen.collection.dataSource = self
+        
+        
+        self.view.addSubview(datePicker)
+//        datePicker.datePickerMode = UIDatePicker.Mode.dateAndTime
+        datePicker.isHidden = true
+        datePicker.layer.backgroundColor = UIColor.white.cgColor
+        datePicker.layer.cornerRadius = 15
+//        button.isSelected = false
+        datePicker.addTarget(self, action: #selector(getter: self.dateSelected), for: UIControl.Event.valueChanged)
+
+        datePicker.preferredDatePickerStyle = .inline
+        
+//        NSLayoutConstraint.activate([
+//            datePicker.topAnchor.constraint(equalTo: view.topAnchor),
+//            datePicker.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+//            datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            datePicker.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+//        ])
    }
 
     private func configureItems(){
@@ -40,12 +60,15 @@ class ViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "calendar"),
             style: .done,
-            target: nil,
-            action: nil
+            target: self,
+            action: #selector(goToCalendar)
         )
         navigationItem.rightBarButtonItem?.tintColor = .black
     }
-
+    @objc func goToCalendar() {
+//        datePicker.isHidden.toggle()
+        navigationController?.pushViewController(CalendarViewController(), animated: true)
+    }
     @objc func returnToLastValue() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         undo()

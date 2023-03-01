@@ -22,6 +22,10 @@
 		7EA277B629358D7600AC26BD /* CenterStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA277B529358D7600AC26BD /* CenterStackView.swift */; };
 		7EA277B82936A5A300AC26BD /* beverage.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EA277B72936A5A300AC26BD /* beverage.json */; };
 		7EA277BA2936B54000AC26BD /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA277B92936B54000AC26BD /* CollectionViewModel.swift */; };
+		82493D14299A7D06009BC2C7 /* TesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82493D13299A7D06009BC2C7 /* TesteViewController.swift */; };
+		82493D17299BD2EF009BC2C7 /* ViewCodeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82493D16299BD2EF009BC2C7 /* ViewCodeConfiguration.swift */; };
+		827DB24229966F61001CD39D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DB24129966F61001CD39D /* CalendarViewController.swift */; };
+		827E37DC2993CF6E0010F806 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E37DB2993CF6E0010F806 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		7EA277B529358D7600AC26BD /* CenterStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterStackView.swift; sourceTree = "<group>"; };
 		7EA277B72936A5A300AC26BD /* beverage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = beverage.json; sourceTree = "<group>"; };
 		7EA277B92936B54000AC26BD /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
+		82493D13299A7D06009BC2C7 /* TesteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TesteViewController.swift; path = MakeItGreatChallenge/Views/TesteViewController.swift; sourceTree = SOURCE_ROOT; };
+		82493D16299BD2EF009BC2C7 /* ViewCodeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeConfiguration.swift; sourceTree = "<group>"; };
+		827DB24129966F61001CD39D /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		827E37DB2993CF6E0010F806 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,12 +119,14 @@
 		4C791E96291406C2009FF480 /* MakeItGreatChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				82493D15299BD268009BC2C7 /* Protocol */,
 				7EA277A52935318600AC26BD /* Managers */,
 				7EA277A82935329000AC26BD /* Resources */,
 				7EA277A42935317800AC26BD /* Models */,
 				7EA277AE2935361800AC26BD /* Views */,
 				7EA277AB2935351600AC26BD /* ViewModels */,
 				4C791E9B291406C2009FF480 /* ViewController.swift */,
+				827DB24129966F61001CD39D /* CalendarViewController.swift */,
 				4C791EA0291406C3009FF480 /* Assets.xcassets */,
 				4C791EA2291406C3009FF480 /* LaunchScreen.storyboard */,
 				4C791EA5291406C3009FF480 /* Info.plist */,
@@ -152,6 +162,7 @@
 		7EA277A52935318600AC26BD /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				82493D13299A7D06009BC2C7 /* TesteViewController.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -181,6 +192,7 @@
 				7EA277B32935881600AC26BD /* BeverageCollection */,
 				7EA277B42935887E00AC26BD /* Stack */,
 				7EA277AF293536B600AC26BD /* FirstScreen.swift */,
+				827E37DB2993CF6E0010F806 /* CalendarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,6 +211,14 @@
 				7EA277B529358D7600AC26BD /* CenterStackView.swift */,
 			);
 			path = Stack;
+			sourceTree = "<group>";
+		};
+		82493D15299BD268009BC2C7 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				82493D16299BD2EF009BC2C7 /* ViewCodeConfiguration.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,12 +355,16 @@
 				7EA277B0293536B600AC26BD /* FirstScreen.swift in Sources */,
 				7EA277AA293532A100AC26BD /* Extensions.swift in Sources */,
 				7EA277AD293535C700AC26BD /* BeverageModel.swift in Sources */,
+				827DB24229966F61001CD39D /* CalendarViewController.swift in Sources */,
 				4C791E9C291406C2009FF480 /* ViewController.swift in Sources */,
 				4C791E98291406C2009FF480 /* AppDelegate.swift in Sources */,
+				82493D17299BD2EF009BC2C7 /* ViewCodeConfiguration.swift in Sources */,
 				7EA277B22935580100AC26BD /* BeverageCollectionViewCell.swift in Sources */,
 				7EA277BA2936B54000AC26BD /* CollectionViewModel.swift in Sources */,
+				82493D14299A7D06009BC2C7 /* TesteViewController.swift in Sources */,
 				7EA277B629358D7600AC26BD /* CenterStackView.swift in Sources */,
 				4C791E9A291406C2009FF480 /* SceneDelegate.swift in Sources */,
+				827E37DC2993CF6E0010F806 /* CalendarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

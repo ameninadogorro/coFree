@@ -20,10 +20,10 @@ class FirstScreen: UIView {
         collection.translatesAutoresizingMaskIntoConstraints = false
         return collection
     }()
-    
+
+   
     override init(frame: CGRect) {
         super.init(frame: frame)
-
         backgroundColor = UIColor(named: "bgColor")
         stackView.translatesAutoresizingMaskIntoConstraints = false
         collection.translatesAutoresizingMaskIntoConstraints = false
