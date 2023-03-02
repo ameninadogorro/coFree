@@ -32,7 +32,7 @@ class CenterStackView: UIView {
         let label = UILabel()
         label.text = "0 mg"
         label.isAccessibilityElement = true
-        label.accessibilityLabel = "Quantidade de cafeína total ingerida"
+        label.accessibilityLabel = "Quantidade de cafeína total ingerida".Localized()
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .title1)
         label.accessibilityTraits.remove(.staticText)
@@ -42,7 +42,7 @@ class CenterStackView: UIView {
 
     let minorLabel: UILabel = {
         let label = UILabel()
-        label.text = "caffeine ingested"
+        label.text = "Caffeine ingested".Localized()
         label.accessibilityElementsHidden = true
         label.isAccessibilityElement = true
 //        label.accessibilityLabel = "Quantidade de cafeína total ingerida durante o dia"
