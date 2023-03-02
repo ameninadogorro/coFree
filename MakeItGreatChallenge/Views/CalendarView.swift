@@ -32,6 +32,7 @@ class CalendarView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = UIColor(named: "background")
         applyViewCode()
         
     }
@@ -55,7 +56,7 @@ extension CalendarView: ViewCodeConfiguration{
         ])
     }
     func configureViews() {
-        self.backgroundColor = .systemBackground
+        self.backgroundColor = UIColor(named: "background")
         datePicker.addBorderOutside(width: 10, color: UIColor.white, cornerRadius: 20)
     }
 }

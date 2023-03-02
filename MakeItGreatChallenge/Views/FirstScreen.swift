@@ -24,7 +24,7 @@ class FirstScreen: UIView {
    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor(named: "bgColor")
+        backgroundColor = UIColor(named: "background")
         stackView.translatesAutoresizingMaskIntoConstraints = false
         collection.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stackView)
