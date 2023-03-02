@@ -24,6 +24,7 @@
 		7EA277BA2936B54000AC26BD /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA277B92936B54000AC26BD /* CollectionViewModel.swift */; };
 		DD563CB229AE2438003B972B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD563CB429AE2438003B972B /* Localizable.strings */; };
 		DD563CBA29AE25E2003B972B /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD563CB929AE25E2003B972B /* SheetViewController.swift */; };
+		DD88AE4529B0E0CC00A1B549 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = DD88AE4429B0E0CC00A1B549 /* .gitattributes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		DD563CB729AE2476003B972B /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DD563CB829AE2477003B972B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DD563CB929AE25E2003B972B /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		DD88AE4429B0E0CC00A1B549 /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		4C791E8B291406C2009FF480 = {
 			isa = PBXGroup;
 			children = (
+				DD88AE4429B0E0CC00A1B549 /* .gitattributes */,
 				4C791E96291406C2009FF480 /* MakeItGreatChallenge */,
 				4C791EAD291406C3009FF480 /* MakeItGreatChallengeTests */,
 				4C791EB7291406C3009FF480 /* MakeItGreatChallengeUITests */,
@@ -320,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD88AE4529B0E0CC00A1B549 /* .gitattributes in Resources */,
 				4C791EA4291406C3009FF480 /* LaunchScreen.storyboard in Resources */,
 				DD563CB229AE2438003B972B /* Localizable.strings in Resources */,
 				4C791EA1291406C3009FF480 /* Assets.xcassets in Resources */,
