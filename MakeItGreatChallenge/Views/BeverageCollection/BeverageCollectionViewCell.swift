@@ -12,7 +12,7 @@ class BeverageCollectionViewCell: UICollectionViewCell {
 
     let beverageCircleView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(named: "collectionback")
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOffset = .init(width: 1, height: 1)
