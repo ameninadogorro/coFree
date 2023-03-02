@@ -1,0 +1,33 @@
+
+/*
+  Localizable.strings
+  MakeItGreatChallenge
+
+  Created by Lunes on 27/02/23.
+
+*/
+
+"Caffeine ingested" = "Ingested Caffeine";
+
+"Consumo diário" = "Daily consumption";
+
+"Segunda-feira, Junho 6" = "Monday, June 6";
+
+
+//VoiceOver
+
+"Quantidade de cafeína total ingerida" = "The total amount of caffeine ingested";
+
+
+//VoiceOver ViewController
+"Ao clicar aqui será adicionado o número de cafeína ao total do dia, passe para frente para mais opções" = "Clicking here will add the number of caffeine to the total for the day, skip ahead for more options";
+
+"Clique aqui para retirar o ultimo valor adicionado" = "Click here to remove the last added value";
+
+"Clique aqui para ver seu histórico de cafeína ingerida" = "Click here to view your caffeine intake history";
+
+"de cafeína ingerida hoje" = "of caffeine ingested today";
+
+"Clique aqui para ver seu histórico de cafeína ingerida" = "Click here to view your caffeine intake history";
+
+

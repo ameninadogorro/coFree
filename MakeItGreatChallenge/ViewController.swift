@@ -54,7 +54,7 @@ class ViewController: UIViewController {
             action: #selector(returnToLastValue)
         )
         navigationItem.leftBarButtonItem?.accessibilityLabel = "Desfazer"
-        navigationItem.leftBarButtonItem?.accessibilityHint = "Clique aqui para retirar o ultimo valor adicionado"
+        navigationItem.leftBarButtonItem?.accessibilityHint = "Clique aqui para retirar o ultimo valor adicionado".Localized()
         navigationItem.leftBarButtonItem?.tintColor = .black
     }
 
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
             action: #selector(goToCalendar)
         )
         navigationItem.rightBarButtonItem?.tintColor = .black
-        navigationItem.rightBarButtonItem?.accessibilityHint = "Clique aqui para ver seu histórico de cafeína ingerida"
+        navigationItem.rightBarButtonItem?.accessibilityHint = "Clique aqui para ver seu histórico de cafeína ingerida".Localized()
     }
     @objc func goToCalendar() {
 //        datePicker.isHidden.toggle()
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
     func reloadView() {
         firstScreen.collection.reloadData()
         firstScreen.stackView.caffeineLevelLabel.text = "\(viewModel.bevs.map(\.caffeineIngested).reduce(0, +)) mg"
-        firstScreen.stackView.caffeineLevelLabel.accessibilityLabel = " \(firstScreen.stackView.caffeineLevelLabel.text ?? "Erro") de cafeína ingerida hoje"
+        firstScreen.stackView.caffeineLevelLabel.accessibilityLabel = "\(firstScreen.stackView.caffeineLevelLabel.text ?? "Erro") " + "de cafeína ingerida hoje".Localized()
         //        label.accessibilityLabel = "\(label.text) Quantidade de cafeína total"
     }
 }
@@ -110,7 +110,7 @@ extension ViewController: UICollectionViewDataSource {
         cell.beverageMeasureLabel.accessibilityTraits.insert(.button)
         cell.beverageNameLabel.accessibilityElementsHidden = true
 //        cell.beverageMeasureLabel.accessibilityLanguage = "eng"
-        cell.beverageMeasureLabel.accessibilityHint = "Ao clicar aqui será adicionado o número de cafeína ao total do dia, passe para frente para mais opções"
+        cell.beverageMeasureLabel.accessibilityHint = "Ao clicar aqui será adicionado o número de cafeína ao total do dia, passe para frente para mais opções".Localized()
 
         return cell
     }
