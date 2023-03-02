@@ -30,9 +30,12 @@ class CenterStackView: UIView {
 
     let caffeineLevelLabel: UILabel = {
         let label = UILabel()
-        label.text = "0 ml"
+        label.text = "0 mg"
+        label.isAccessibilityElement = true
+        label.accessibilityLabel = "Quantidade de cafeína total ingerida"
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .title1)
+        label.accessibilityTraits.remove(.staticText)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -40,6 +43,10 @@ class CenterStackView: UIView {
     let minorLabel: UILabel = {
         let label = UILabel()
         label.text = "caffeine ingested"
+        label.accessibilityElementsHidden = true
+        label.isAccessibilityElement = true
+//        label.accessibilityLabel = "Quantidade de cafeína total ingerida durante o dia"
+        label.accessibilityTraits.remove(.staticText)
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .headline)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -60,16 +67,11 @@ class CenterStackView: UIView {
         verticalStackView.addArrangedSubview(minorLabel)
         verticalStackView.addArrangedSubview(imageView)
         addSubview(verticalStackView)
-
         NSLayoutConstraint.activate([
-
             verticalStackView.topAnchor.constraint(equalTo: topAnchor),
             verticalStackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier:  0.95),
             verticalStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             verticalStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-
         ])
     }
-
-
 }
