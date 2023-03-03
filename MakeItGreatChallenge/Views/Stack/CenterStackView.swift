@@ -13,6 +13,7 @@ class CenterStackView: UIView {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.alignment = .center
+//        stack.spacing = 10
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
@@ -22,8 +23,8 @@ class CenterStackView: UIView {
         imageView.backgroundColor = .white
 //        imageView.layer.borderColor = UIColor.systemPink.withAlphaComponent(0.2).cgColor
 //        imageView.layer.borderWidth = 5.0
-        imageView.image = UIImage(named: "coffee-mug")
-        imageView.contentMode = .bottom
+        imageView.image = UIImage(named: "coffee-mug1")
+        imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = .clear
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -35,7 +36,7 @@ class CenterStackView: UIView {
         label.isAccessibilityElement = true
         label.accessibilityLabel = "Quantidade de cafeína total ingerida".Localized()
         label.textAlignment = .center
-        label.font = UIFont.preferredFont(forTextStyle: .title1)
+        label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         label.textColor = UIColor(named: "titulo")
         label.accessibilityTraits.remove(.staticText)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -51,7 +52,7 @@ class CenterStackView: UIView {
         label.accessibilityTraits.remove(.staticText)
         label.textAlignment = .center
         label.textColor = UIColor(named: "subtitulo")
-        label.font = UIFont.preferredFont(forTextStyle: .headline)
+        label.font = UIFont.preferredFont(forTextStyle: .title2)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -70,11 +71,21 @@ class CenterStackView: UIView {
         verticalStackView.addArrangedSubview(minorLabel)
         verticalStackView.addArrangedSubview(imageView)
         addSubview(verticalStackView)
+        imageView.heightAnchor.constraint(
+            equalToConstant: UIScreen.main.bounds.height * 0.50
+        ).isActive = true
         NSLayoutConstraint.activate([
             verticalStackView.topAnchor.constraint(equalTo: topAnchor),
             verticalStackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier:  0.95),
             verticalStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             verticalStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+//            im.topAnchor.constraint(equalTo: topAnchor),
+//            im.widthAnchor.constraint(equalTo: widthAnchor, multiplier:  0.95),
+//            im.centerXAnchor.constraint(equalTo: centerXAnchor),
+//            im.bottomAnchor.constraint(equalTo: bottomAnchor),
+    
+            
         ])
     }
 }
