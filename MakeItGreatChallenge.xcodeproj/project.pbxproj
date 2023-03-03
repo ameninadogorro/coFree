@@ -117,7 +117,6 @@
 		4C791E8B291406C2009FF480 = {
 			isa = PBXGroup;
 			children = (
-				DD88AE4429B0E0CC00A1B549 /* .gitattributes */,
 				4C791E96291406C2009FF480 /* MakeItGreatChallenge */,
 				4C791EAD291406C3009FF480 /* MakeItGreatChallengeTests */,
 				4C791EB7291406C3009FF480 /* MakeItGreatChallengeUITests */,
@@ -352,7 +351,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD88AE4529B0E0CC00A1B549 /* .gitattributes in Resources */,
 				4C791EA4291406C3009FF480 /* LaunchScreen.storyboard in Resources */,
 				DD563CB229AE2438003B972B /* Localizable.strings in Resources */,
 				4C791EA1291406C3009FF480 /* Assets.xcassets in Resources */,

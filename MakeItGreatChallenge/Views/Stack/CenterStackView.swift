@@ -24,6 +24,7 @@ class CenterStackView: UIView {
 //        imageView.layer.borderWidth = 5.0
         imageView.image = UIImage(named: "coffee-mug")
         imageView.contentMode = .bottom
+        imageView.backgroundColor = .clear
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -35,6 +36,7 @@ class CenterStackView: UIView {
         label.accessibilityLabel = "Quantidade de cafeína total ingerida".Localized()
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .title1)
+        label.textColor = UIColor(named: "titulo")
         label.accessibilityTraits.remove(.staticText)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -48,6 +50,7 @@ class CenterStackView: UIView {
 //        label.accessibilityLabel = "Quantidade de cafeína total ingerida durante o dia"
         label.accessibilityTraits.remove(.staticText)
         label.textAlignment = .center
+        label.textColor = UIColor(named: "subtitulo")
         label.font = UIFont.preferredFont(forTextStyle: .headline)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
