@@ -45,7 +45,7 @@ class SheetViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 0.85, green: 0.78, blue: 0.69, alpha: 1.00)
+        self.view.backgroundColor = UIColor(named: "background")
         navigationItem.title = "Consumo diário".Localized()
         self.navigationController?.navigationBar.backgroundColor = UIColor(red: 0.76, green: 0.71, blue: 0.66, alpha: 1.00)
 
