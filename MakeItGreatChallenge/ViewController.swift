@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  MakeItGreatChallenge
-//
-//  Created by Ana Raiany Guimarães Gomes on 2022-11-03.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -29,21 +22,13 @@ class ViewController: UIViewController {
         
         
         self.view.addSubview(datePicker)
-//        datePicker.datePickerMode = UIDatePicker.Mode.dateAndTime
         datePicker.isHidden = true
         datePicker.layer.backgroundColor = UIColor.white.cgColor
         datePicker.layer.cornerRadius = 15
-//        button.isSelected = false
         datePicker.addTarget(self, action: #selector(getter: self.dateSelected), for: UIControl.Event.valueChanged)
 
         datePicker.preferredDatePickerStyle = .inline
-        
-//        NSLayoutConstraint.activate([
-//            datePicker.topAnchor.constraint(equalTo: view.topAnchor),
-//            datePicker.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-//            datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            datePicker.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-//        ])
+
    }
 
     private func configureItems(){
@@ -69,7 +54,6 @@ class ViewController: UIViewController {
         navigationItem.rightBarButtonItem?.accessibilityHint = "Clique aqui para ver seu histórico de cafeína ingerida".Localized()
     }
     @objc func goToCalendar() {
-//        datePicker.isHidden.toggle()
         navigationController?.pushViewController(CalendarViewController(), animated: true)
     }
     @objc func returnToLastValue() {
@@ -88,7 +72,6 @@ class ViewController: UIViewController {
         firstScreen.collection.reloadData()
         firstScreen.stackView.caffeineLevelLabel.text = "\(viewModel.bevs.map(\.caffeineIngested).reduce(0, +)) mg"
         firstScreen.stackView.caffeineLevelLabel.accessibilityLabel = "\(firstScreen.stackView.caffeineLevelLabel.text ?? "Erro") " + "de cafeína ingerida hoje".Localized()
-        //        label.accessibilityLabel = "\(label.text) Quantidade de cafeína total"
     }
 }
 
@@ -109,7 +92,6 @@ extension ViewController: UICollectionViewDataSource {
         cell.beverageMeasureLabel.accessibilityTraits.remove(.staticText)
         cell.beverageMeasureLabel.accessibilityTraits.insert(.button)
         cell.beverageNameLabel.accessibilityElementsHidden = true
-//        cell.beverageMeasureLabel.accessibilityLanguage = "eng"
         cell.beverageMeasureLabel.accessibilityHint = "Ao clicar aqui será adicionado o número de cafeína ao total do dia, passe para frente para mais opções".Localized()
 
         return cell
@@ -127,7 +109,7 @@ extension ViewController: UICollectionViewDataSource {
 extension ViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.height * 0.75,
+        return CGSize(width: collectionView.frame.height * 0.95,
                       height: collectionView.frame.height)
     }
 }

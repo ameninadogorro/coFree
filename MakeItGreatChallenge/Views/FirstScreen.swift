@@ -1,10 +1,3 @@
-//
-//  FirstScreen.swift
-//  MakeItGreatChallenge
-//
-//  Created by Luciana Adrião on 28/11/22.
-//
-
 import UIKit
 
 class FirstScreen: UIView {
@@ -51,7 +44,6 @@ class FirstScreen: UIView {
             collection.topAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -200),
             collection.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor),
             collection.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor),
-//            collection.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 1/3)
             collection.heightAnchor.constraint(equalToConstant: 150)
         ])
     }

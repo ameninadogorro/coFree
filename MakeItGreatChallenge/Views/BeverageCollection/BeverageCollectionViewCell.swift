@@ -1,23 +1,34 @@
-//
-//  BeverageCollectionViewCell.swift
-//  MakeItGreatChallenge
-//
-//  Created by Luciana Adrião on 28/11/22.
-//
-
 import UIKit
 
 class BeverageCollectionViewCell: UICollectionViewCell {
     static let identifier = "beverageOption"
 
-    let beverageCircleView: UIView = {
+    let beverageRetangleView: UIView = {
         let view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 107, height: 100)
         view.backgroundColor = UIColor(named: "collectionback")
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOffset = .init(width: 1, height: 1)
         view.layer.shadowRadius = 4
         view.layer.shadowOpacity = 0.25
+        view.clipsToBounds = true
+        return view
+    }()
+
+    let beverageCircleView: UIView = {
+        let view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 49, height: 49)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        return view
+    }()
+
+    let beverageMinorRetangleView: UIView = {
+        let view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 41, height: 21)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
         return view
     }()
 
@@ -27,8 +38,7 @@ class BeverageCollectionViewCell: UICollectionViewCell {
         imageView.backgroundColor = .clear
         imageView.tintColor = .systemIndigo
         imageView.layer.masksToBounds = true
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -37,7 +47,7 @@ class BeverageCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .center
         label.text = "0"
-        label.textColor = .lightGray
+        label.textColor = .black
         label.font = UIFont.preferredFont(forTextStyle: .body)
         label.contentMode = .scaleAspectFit
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -47,20 +57,20 @@ class BeverageCollectionViewCell: UICollectionViewCell {
     let beverageNameLabel: UILabel = {
         let label = UILabel()
         label.text = "name".Localized()
-//        label.font = UIFont.preferredFont(forTextStyle: .caption2)
         label.adjustsFontForContentSizeCategory = true
-        label.numberOfLines = 2
-        label.textAlignment = .center
+        label.numberOfLines = 3
+        label.textAlignment = .left
         label.textColor = .label
         label.contentMode = .scaleAspectFit
-        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        beverageCircleView.layer.cornerRadius = beverageCircleView.frame.height/3
+        beverageRetangleView.layer.cornerRadius = 10
+        beverageMinorRetangleView.layer.cornerRadius = 5
+        beverageCircleView.layer.cornerRadius = 33
     }
 
     override init(frame: CGRect) {
@@ -74,42 +84,59 @@ class BeverageCollectionViewCell: UICollectionViewCell {
 
     func setupViews() {
 
+        addSubview(beverageRetangleView)
+        NSLayoutConstraint.activate([
+
+            beverageRetangleView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            beverageRetangleView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            beverageRetangleView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.75),
+            beverageRetangleView.widthAnchor.constraint(equalTo: beverageRetangleView.heightAnchor, constant: 20)
+
+        ])
+
+        beverageRetangleView.addSubview(beverageCircleView)
+
+        NSLayoutConstraint.activate([
+
+            beverageCircleView.widthAnchor.constraint(equalTo: beverageRetangleView.widthAnchor, multiplier: 0.5),
+            beverageCircleView.heightAnchor.constraint(equalTo: beverageCircleView.widthAnchor),
+            beverageCircleView.centerXAnchor.constraint(equalTo: beverageRetangleView.trailingAnchor,constant: -15),
+            beverageCircleView.centerYAnchor.constraint(equalTo: beverageRetangleView.bottomAnchor, constant: -25)
+
+        ])
+
         beverageCircleView.addSubview(beverageImageView)
+
         NSLayoutConstraint.activate([
-
-            beverageImageView.widthAnchor.constraint(equalTo: beverageCircleView.widthAnchor, multiplier: 0.4),
-            beverageImageView.heightAnchor.constraint(equalTo: beverageImageView.widthAnchor),
-            beverageImageView.centerXAnchor.constraint(equalTo: beverageCircleView.centerXAnchor),
-            beverageImageView.centerYAnchor.constraint(equalTo: beverageCircleView.centerYAnchor)
-
+            beverageImageView.centerXAnchor.constraint(equalTo: beverageCircleView.centerXAnchor, constant: 2),
+            beverageImageView.centerYAnchor.constraint(equalTo: beverageCircleView.centerYAnchor),
+            beverageImageView.heightAnchor.constraint(equalTo: beverageCircleView.heightAnchor, multiplier: 0.75),
+            beverageImageView.widthAnchor.constraint(equalTo: beverageCircleView.widthAnchor, multiplier: 0.75)
         ])
 
-        beverageCircleView.addSubview(beverageMeasureLabel)
-        NSLayoutConstraint.activate([
+        beverageRetangleView.addSubview(beverageNameLabel)
 
-            beverageMeasureLabel.centerXAnchor.constraint(equalTo: beverageCircleView.centerXAnchor),
-            beverageMeasureLabel.bottomAnchor.constraint(greaterThanOrEqualTo: beverageCircleView.bottomAnchor),
-            beverageMeasureLabel.topAnchor.constraint(equalTo: beverageImageView.bottomAnchor),
-            beverageMeasureLabel.widthAnchor.constraint(equalTo: beverageCircleView.widthAnchor, multiplier: 0.9)
+        NSLayoutConstraint.activate([
+            beverageNameLabel.topAnchor.constraint(equalTo: beverageRetangleView.topAnchor, constant: 10),
+            beverageNameLabel.leadingAnchor.constraint(equalTo: beverageRetangleView.leadingAnchor, constant: 10),
+            beverageNameLabel.trailingAnchor.constraint(equalTo: beverageRetangleView.trailingAnchor, constant: -10)
         ])
 
-        addSubview(beverageCircleView)
+        beverageRetangleView.addSubview(beverageMinorRetangleView)
+
         NSLayoutConstraint.activate([
-
-            beverageCircleView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            beverageCircleView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            beverageCircleView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.65),
-            beverageCircleView.widthAnchor.constraint(equalTo: beverageCircleView.heightAnchor)
-
+            beverageMinorRetangleView.topAnchor.constraint(equalTo: beverageNameLabel.bottomAnchor, constant: 20),
+            beverageMinorRetangleView.leadingAnchor.constraint(equalTo: beverageRetangleView.leadingAnchor, constant: 10),
+            beverageMinorRetangleView.trailingAnchor.constraint(equalTo: beverageCircleView.leadingAnchor, constant: -12),
+            beverageMinorRetangleView.bottomAnchor.constraint(equalTo: beverageRetangleView.bottomAnchor, constant: -10)
         ])
 
-        addSubview(beverageNameLabel)
-        NSLayoutConstraint.activate([
+        beverageMinorRetangleView.addSubview(beverageMeasureLabel)
 
-            beverageNameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            beverageNameLabel.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: beverageCircleView.bottomAnchor, multiplier: 0.4),
-            beverageNameLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
-            beverageNameLabel.heightAnchor.constraint(greaterThanOrEqualTo: self.heightAnchor, multiplier: 0.25)
+        NSLayoutConstraint.activate([
+            beverageMeasureLabel.centerXAnchor.constraint(equalTo: beverageMinorRetangleView.centerXAnchor),
+            beverageMeasureLabel.centerYAnchor.constraint(equalTo: beverageMinorRetangleView.centerYAnchor)
         ])
+
     }
 }

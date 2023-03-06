@@ -1,17 +1,9 @@
-//
-//  CalendarViewController.swift
-//  MakeItGreatChallenge
-//
-//  Created by Israel Carvalho on 10/02/23.
-//
-
 import UIKit
 
 class CalendarViewController: UIViewController {
     
     let calendarView: UIView = {
         var calendar = CalendarView()
-//        calendar.layer.borderWidth = 20
         return calendar
     }()
 

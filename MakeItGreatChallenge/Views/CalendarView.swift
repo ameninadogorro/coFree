@@ -1,13 +1,4 @@
-//
-//  Calendar.swift
-//  MakeItGreatChallenge
-//
-//  Created by Israel Carvalho on 08/02/23.
-//
-
 import UIKit
-
-// swift
 
 class CalendarView: UIView {
     
@@ -19,13 +10,8 @@ class CalendarView: UIView {
         date.preferredDatePickerStyle = .inline
         date.backgroundColor = .white
         date.translatesAutoresizingMaskIntoConstraints = false
-//        date.layer.borderWidth  = 8
         date.layer.cornerRadius = 20
         date.layer.masksToBounds = true
-
-//        date.frame = CGRectInset(self.frame, -2.0, -2.0)
-//        date.layer.borderColor = UIColor.systemPink.cgColor
-//        date.layer.borderWidth = 2.0
         
         return date
     }()

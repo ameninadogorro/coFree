@@ -1,10 +1,3 @@
-//
-//  TesteViewController.swift
-//  MakeItGreatChallenge
-//
-//  Created by Israel Carvalho on 13/02/23.
-//
-
 import UIKit
 
 class TesteViewController: UIViewController {
@@ -12,7 +5,6 @@ class TesteViewController: UIViewController {
     let testeLabel: UILabel = {
         let label = UILabel()
         label.text = "Gay"
-        //label.font = UIFont.systemFont(ofSize: UIScreen.main.bounds.height * 0.1)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = .systemPink
         label.textColor = .white
@@ -21,8 +13,7 @@ class TesteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .white
-//        view.backgroundColor = .blue
+
         view.backgroundColor = .white
         view.addSubview(testeLabel)
         // Do any additional setup after loading the view.

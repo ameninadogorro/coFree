@@ -22,7 +22,6 @@
 		7EA277B629358D7600AC26BD /* CenterStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA277B529358D7600AC26BD /* CenterStackView.swift */; };
 		7EA277B82936A5A300AC26BD /* beverage.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EA277B72936A5A300AC26BD /* beverage.json */; };
 		7EA277BA2936B54000AC26BD /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA277B92936B54000AC26BD /* CollectionViewModel.swift */; };
-		82493D14299A7D06009BC2C7 /* TesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82493D13299A7D06009BC2C7 /* TesteViewController.swift */; };
 		82493D17299BD2EF009BC2C7 /* ViewCodeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82493D16299BD2EF009BC2C7 /* ViewCodeConfiguration.swift */; };
 		827DB24229966F61001CD39D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827DB24129966F61001CD39D /* CalendarViewController.swift */; };
 		827E37DC2993CF6E0010F806 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E37DB2993CF6E0010F806 /* CalendarView.swift */; };
@@ -71,7 +70,6 @@
 		7EA277B529358D7600AC26BD /* CenterStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterStackView.swift; sourceTree = "<group>"; };
 		7EA277B72936A5A300AC26BD /* beverage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = beverage.json; sourceTree = "<group>"; };
 		7EA277B92936B54000AC26BD /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
-		82493D13299A7D06009BC2C7 /* TesteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TesteViewController.swift; path = MakeItGreatChallenge/Views/TesteViewController.swift; sourceTree = SOURCE_ROOT; };
 		82493D16299BD2EF009BC2C7 /* ViewCodeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeConfiguration.swift; sourceTree = "<group>"; };
 		827DB24129966F61001CD39D /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		827E37DB2993CF6E0010F806 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 		7EA277A52935318600AC26BD /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				82493D13299A7D06009BC2C7 /* TesteViewController.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -393,7 +390,6 @@
 				7EA277B22935580100AC26BD /* BeverageCollectionViewCell.swift in Sources */,
 				DD563CBA29AE25E2003B972B /* SheetViewController.swift in Sources */,
 				7EA277BA2936B54000AC26BD /* CollectionViewModel.swift in Sources */,
-				82493D14299A7D06009BC2C7 /* TesteViewController.swift in Sources */,
 				7EA277B629358D7600AC26BD /* CenterStackView.swift in Sources */,
 				4C791E9A291406C2009FF480 /* SceneDelegate.swift in Sources */,
 				827E37DC2993CF6E0010F806 /* CalendarView.swift in Sources */,
@@ -582,14 +578,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2D837DJ3YC;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeItGreatChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -610,14 +606,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2D837DJ3YC;
+				DEVELOPMENT_TEAM = MXSWN6Q9F5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeItGreatChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

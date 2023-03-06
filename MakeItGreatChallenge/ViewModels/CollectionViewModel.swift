@@ -1,16 +1,8 @@
-//
-//  CollectionViewModel.swift
-//  MakeItGreatChallenge
-//
-//  Created by Luciana Adrião on 29/11/22.
-//
-
 import Foundation
 
 class CollectionViewModel {
     var bevs: [Beverage] = []
 
-    // MARK: FOR LOCAL JSON
     func readLocalFile(name: String) -> Data? {
         do {
             guard let filePath = Bundle.main.path(forResource: name, ofType: "json") else { return nil }
@@ -34,7 +26,6 @@ class CollectionViewModel {
         return nil
     }
 
-    // MARK: FOR HOSTED JSON
     func loadJson(fromURLString urlString: String, completion: @escaping (Result<Data, Error>) -> Void) {
         if let url = URL(string: urlString) {
             let urlSession = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in

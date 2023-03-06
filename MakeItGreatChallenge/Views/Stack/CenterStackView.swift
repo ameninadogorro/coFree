@@ -1,10 +1,3 @@
-//
-//  CenterView.swift
-//  MakeItGreatChallenge
-//
-//  Created by Luciana Adrião on 28/11/22.
-//
-
 import UIKit
 
 class CenterStackView: UIView {
@@ -78,13 +71,6 @@ class CenterStackView: UIView {
             verticalStackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier:  0.95),
             verticalStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             verticalStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-//            im.topAnchor.constraint(equalTo: topAnchor),
-//            im.widthAnchor.constraint(equalTo: widthAnchor, multiplier:  0.95),
-//            im.centerXAnchor.constraint(equalTo: centerXAnchor),
-//            im.bottomAnchor.constraint(equalTo: bottomAnchor),
-    
-            
         ])
     }
 }

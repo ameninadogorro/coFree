@@ -1,10 +1,3 @@
-//
-//  SheetViewController.swift
-//  MakeItGreatChallenge
-//
-//  Created by Lunes on 13/02/23.
-//
-
 import UIKit
 
 class SheetViewController: UIViewController {

@@ -1,6 +1,18 @@
 {
     "beverages": [
         {
+            "image": "green-tea-2",
+            "name":"Chá de Menta",
+            "caffeineLevel": 40,
+            "mililiters": 250
+        },
+        {
+            "image": "chocolate-bar",
+            "name":"Chocolate",
+            "caffeineLevel": 70,
+            "mililiters": 200
+        },
+        {
             "image": "coffee-beans",
             "name":"Café",
             "caffeineLevel": 80,
@@ -19,19 +31,13 @@
             "mililiters": 200
         },
         {
-            "image": "yerba-tea",
-            "name":"Chá Yerba",
-            "caffeineLevel": 40,
-            "mililiters": 200
-        },
-        {
             "image": "energy-can",
             "name":"Energético",
             "caffeineLevel": 170,
             "mililiters": 473
         },
         {
-            "image": "green-tea",
+            "image": "yerba-tea",
             "name":"Chá Mate",
             "caffeineLevel": 64,
             "mililiters": 200
