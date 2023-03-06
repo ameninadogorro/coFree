@@ -28,10 +28,10 @@
 		827E37DC2993CF6E0010F806 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E37DB2993CF6E0010F806 /* CalendarView.swift */; };
 		DD563CB229AE2438003B972B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD563CB429AE2438003B972B /* Localizable.strings */; };
 		DD563CBA29AE25E2003B972B /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD563CB929AE25E2003B972B /* SheetViewController.swift */; };
-		DD88AE4529B0E0CC00A1B549 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = DD88AE4429B0E0CC00A1B549 /* .gitattributes */; };
 		DD88AE4829B0EC0700A1B549 /* ConfeeCareData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD88AE4629B0EC0700A1B549 /* ConfeeCareData.xcdatamodeld */; };
-		DD88AE4B29B2132B00A1B549 /* ConsumoDia+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88AE4929B2132B00A1B549 /* ConsumoDia+CoreDataClass.swift */; };
-		DD88AE4C29B2132B00A1B549 /* ConsumoDia+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88AE4A29B2132B00A1B549 /* ConsumoDia+CoreDataProperties.swift */; };
+		DD88AE5329B21EE200A1B549 /* ConsumoDia+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88AE5129B21EE200A1B549 /* ConsumoDia+CoreDataClass.swift */; };
+		DD88AE5429B21EE200A1B549 /* ConsumoDia+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88AE5229B21EE200A1B549 /* ConsumoDia+CoreDataProperties.swift */; };
+		DD88AE5629B22A8400A1B549 /* CoreDataMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88AE5529B22A8400A1B549 /* CoreDataMethods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,10 +83,10 @@
 		DD563CB729AE2476003B972B /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DD563CB829AE2477003B972B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DD563CB929AE25E2003B972B /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
-		DD88AE4429B0E0CC00A1B549 /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		DD88AE4729B0EC0700A1B549 /* ConfeeCareData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConfeeCareData.xcdatamodel; sourceTree = "<group>"; };
-		DD88AE4929B2132B00A1B549 /* ConsumoDia+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsumoDia+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DD88AE4A29B2132B00A1B549 /* ConsumoDia+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsumoDia+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DD88AE5129B21EE200A1B549 /* ConsumoDia+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsumoDia+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DD88AE5229B21EE200A1B549 /* ConsumoDia+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsumoDia+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DD88AE5529B22A8400A1B549 /* CoreDataMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMethods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +175,9 @@
 		7EA277A42935317800AC26BD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DD88AE4929B2132B00A1B549 /* ConsumoDia+CoreDataClass.swift */,
-				DD88AE4A29B2132B00A1B549 /* ConsumoDia+CoreDataProperties.swift */,
+				DD88AE5129B21EE200A1B549 /* ConsumoDia+CoreDataClass.swift */,
+				DD88AE5529B22A8400A1B549 /* CoreDataMethods.swift */,
+				DD88AE5229B21EE200A1B549 /* ConsumoDia+CoreDataProperties.swift */,
 				7EA277AC293535C700AC26BD /* BeverageModel.swift */,
 			);
 			path = Models;
@@ -380,8 +381,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EA277B0293536B600AC26BD /* FirstScreen.swift in Sources */,
+				DD88AE5629B22A8400A1B549 /* CoreDataMethods.swift in Sources */,
 				7EA277AA293532A100AC26BD /* Extensions.swift in Sources */,
-				DD88AE4C29B2132B00A1B549 /* ConsumoDia+CoreDataProperties.swift in Sources */,
+				DD88AE5429B21EE200A1B549 /* ConsumoDia+CoreDataProperties.swift in Sources */,
 				DD88AE4829B0EC0700A1B549 /* ConfeeCareData.xcdatamodeld in Sources */,
 				7EA277AD293535C700AC26BD /* BeverageModel.swift in Sources */,
 				827DB24229966F61001CD39D /* CalendarViewController.swift in Sources */,
@@ -395,7 +397,7 @@
 				7EA277B629358D7600AC26BD /* CenterStackView.swift in Sources */,
 				4C791E9A291406C2009FF480 /* SceneDelegate.swift in Sources */,
 				827E37DC2993CF6E0010F806 /* CalendarView.swift in Sources */,
-				DD88AE4B29B2132B00A1B549 /* ConsumoDia+CoreDataClass.swift in Sources */,
+				DD88AE5329B21EE200A1B549 /* ConsumoDia+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
