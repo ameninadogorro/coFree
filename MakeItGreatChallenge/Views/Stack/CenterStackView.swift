@@ -37,6 +37,7 @@ class CenterStackView: UIView {
         label.accessibilityLabel = "Quantidade de cafeína total ingerida".Localized()
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        label.adjustsFontForContentSizeCategory = true
         label.textColor = UIColor(named: "titulo")
         label.accessibilityTraits.remove(.staticText)
         label.translatesAutoresizingMaskIntoConstraints = false
