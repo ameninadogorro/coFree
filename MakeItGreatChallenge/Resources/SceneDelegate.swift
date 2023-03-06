@@ -20,8 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-
-        let nav = UINavigationController(rootViewController: ViewController())
+        window?.overrideUserInterfaceStyle = .light
+        let nav = UINavigationController(rootViewController: SheetViewController())
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }

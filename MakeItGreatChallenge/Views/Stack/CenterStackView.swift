@@ -13,7 +13,6 @@ class CenterStackView: UIView {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.alignment = .center
-//        stack.spacing = 10
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
@@ -21,8 +20,6 @@ class CenterStackView: UIView {
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .white
-//        imageView.layer.borderColor = UIColor.systemPink.withAlphaComponent(0.2).cgColor
-//        imageView.layer.borderWidth = 5.0
         imageView.image = UIImage(named: "coffee-mug1")
         imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = .clear
@@ -46,14 +43,15 @@ class CenterStackView: UIView {
 
     let minorLabel: UILabel = {
         let label = UILabel()
-        label.text = "Caffeine ingested".Localized()
+        label.text = "Cafeína Ingerida".Localized()
         label.accessibilityElementsHidden = true
         label.isAccessibilityElement = true
-//        label.accessibilityLabel = "Quantidade de cafeína total ingerida durante o dia"
         label.accessibilityTraits.remove(.staticText)
         label.textAlignment = .center
         label.textColor = UIColor(named: "subtitulo")
         label.font = UIFont.preferredFont(forTextStyle: .title2)
+        label.adjustsFontForContentSizeCategory = true
+        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

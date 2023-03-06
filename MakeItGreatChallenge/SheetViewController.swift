@@ -11,6 +11,10 @@ class SheetViewController: UIViewController {
 
     private let weekDays: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont.preferredFont(forTextStyle: .body)
+        label.adjustsFontForContentSizeCategory = true
+        label.numberOfLines = 2
         label.text = "Segunda-feira, Junho 6".Localized()
         return label
 
@@ -18,8 +22,7 @@ class SheetViewController: UIViewController {
 
     let imageView: UIImageView = {
         let imageView = UIImageView()
-
-        imageView.image = UIImage(named: "coffee-mug")
+        imageView.image = UIImage(named: "coffee-mug1")
         imageView.contentMode = .center
         imageView.frame.origin = CGPoint(x: 200, y: 350)
         return imageView
@@ -30,6 +33,8 @@ class SheetViewController: UIViewController {
         label.text = "253 mg"
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .title1)
+        label.adjustsFontForContentSizeCategory = true
+        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -39,6 +44,8 @@ class SheetViewController: UIViewController {
         label.text = "Cafeína Ingerida".Localized()
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .title2)
+        label.adjustsFontForContentSizeCategory = true
+        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -54,22 +61,31 @@ class SheetViewController: UIViewController {
         view.addSubview(lastLabel)
         view.addSubview(imageView)
 
-
-
-
-
         weekDays.translatesAutoresizingMaskIntoConstraints = false
-        weekDays.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        weekDays.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant:10).isActive = true
-
-
         caffeineAmount.translatesAutoresizingMaskIntoConstraints = false
-        caffeineAmount.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        caffeineAmount.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant:100).isActive = true
-
         lastLabel.translatesAutoresizingMaskIntoConstraints = false
-        lastLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        lastLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant:140).isActive = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+
+
+        NSLayoutConstraint.activate([
+            weekDays.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            weekDays.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            weekDays.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.15),
+            weekDays.widthAnchor.constraint(equalTo: view.widthAnchor),
+
+
+            caffeineAmount.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            caffeineAmount.topAnchor.constraint(equalTo: weekDays.bottomAnchor),
+
+            lastLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            lastLabel.topAnchor.constraint(equalTo: caffeineAmount.bottomAnchor),
+
+            imageView.topAnchor.constraint(equalTo: lastLabel.bottomAnchor),
+            imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+        ])
+
 
 
 

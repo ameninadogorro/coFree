@@ -7,11 +7,25 @@
 
 */
 
-"Caffeine ingested" = "Ingested Caffeine";
+"Cafeína Ingerida" = "Ingested Caffeine";
 
 "Consumo diário" = "Daily consumption";
 
 "Segunda-feira, Junho 6" = "Monday, June 6";
+
+"Café" = "Coffee";
+
+"Chá Preto" = "Black Tea";
+
+"Chá Verde" = "Green Tea";
+
+"Chá Yerba" = "Yerba Tea";
+
+"Energético" = "Energy Drink";
+
+"Chá Mate" = "Matcha Tea";
+
+"Kombucha" = "Kombucha";
 
 
 //VoiceOver

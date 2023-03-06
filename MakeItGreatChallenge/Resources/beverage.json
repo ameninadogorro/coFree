@@ -2,37 +2,37 @@
     "beverages": [
         {
             "image": "coffee-beans",
-            "name":"Coffee",
+            "name":"Café",
             "caffeineLevel": 80,
             "mililiters": 250
         },
         {
             "image": "black-tea",
-            "name": "Black Tea",
+            "name": "Chá Preto",
             "caffeineLevel": 42,
             "mililiters": 200
         },
         {
             "image": "green-tea",
-            "name":"Green Tea",
+            "name":"Chá Verde",
             "caffeineLevel": 45,
             "mililiters": 200
         },
         {
             "image": "yerba-tea",
-            "name":"Yerba Tea",
+            "name":"Chá Yerba",
             "caffeineLevel": 40,
             "mililiters": 200
         },
         {
             "image": "energy-can",
-            "name":"Energy Drink",
+            "name":"Energético",
             "caffeineLevel": 170,
             "mililiters": 473
         },
         {
             "image": "green-tea",
-            "name":"Matcha Tea",
+            "name":"Chá Mate",
             "caffeineLevel": 64,
             "mililiters": 200
         },

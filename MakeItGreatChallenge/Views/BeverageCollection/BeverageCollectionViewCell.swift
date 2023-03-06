@@ -46,8 +46,10 @@ class BeverageCollectionViewCell: UICollectionViewCell {
 
     let beverageNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "name"
-//        label.font = UIFont.preferredFont(forTextStyle: .title3)
+        label.text = "name".Localized()
+//        label.font = UIFont.preferredFont(forTextStyle: .caption2)
+        label.adjustsFontForContentSizeCategory = true
+        label.numberOfLines = 2
         label.textAlignment = .center
         label.textColor = .label
         label.contentMode = .scaleAspectFit

@@ -102,7 +102,7 @@ extension ViewController: UICollectionViewDataSource {
 
         let beverages = viewModel.beverages()
         let currentBeverage = beverages[indexPath.row]
-        cell.beverageNameLabel.text = "\(currentBeverage.name)\n(\(currentBeverage.mililiters) ml)"
+        cell.beverageNameLabel.text = "\(currentBeverage.name.Localized())\n(\(currentBeverage.mililiters) ml)"
         cell.beverageImageView.image = UIImage(named: currentBeverage.image)
         cell.beverageMeasureLabel.text = "\(currentBeverage.caffeineIngested / currentBeverage.caffeineLevel) 🥛"
         cell.beverageMeasureLabel.accessibilityLabel = "\(currentBeverage.caffeineIngested / currentBeverage.caffeineLevel) copos de \(currentBeverage.name) com \(currentBeverage.mililiters) ml"
