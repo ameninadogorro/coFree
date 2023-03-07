@@ -36,6 +36,7 @@ class FirstScreen: UIView {
     }
 
     func setupViews() {
+        print("constraints")
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             stackView.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor),

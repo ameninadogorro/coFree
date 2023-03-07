@@ -2,9 +2,29 @@ import Foundation
 
 class CollectionViewModel {
     var bevs: [Beverage] = []
+    var drunks: [Beverage] = []
+
+    init() {
+        if FileManager().docExist(named: fileName) {
+            loadBevs()
+            loadDrunk()
+        } else {
+            self.bevs = beverages()
+        }
+    }
+
+    func beverages() -> [Beverage] {
+        if let localData = readLocalFile(name: "beverage"), let options = parseJSON(jsonData: localData) {
+            self.bevs = options.beverages
+            return bevs
+        } else {
+            return bevs
+        }
+    }
 
     func readLocalFile(name: String) -> Data? {
         do {
+            print("doing read")
             guard let filePath = Bundle.main.path(forResource: name, ofType: "json") else { return nil }
             let jsonData = try String(contentsOfFile: filePath).data(using: .utf8)
             return jsonData
@@ -16,6 +36,7 @@ class CollectionViewModel {
     }
 
     func parseJSON(jsonData: Data) -> Options?  {
+        print("doin parse")
         do {
             let decodedData = try JSONDecoder().decode(Options.self, from: jsonData)
             return decodedData
@@ -26,27 +47,19 @@ class CollectionViewModel {
         return nil
     }
 
-    func loadJson(fromURLString urlString: String, completion: @escaping (Result<Data, Error>) -> Void) {
-        if let url = URL(string: urlString) {
-            let urlSession = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
-                if let error = error {
-                    completion(.failure(error))
-                }
-
-                if let data = data {
-                    completion(.success(data))
-                }
-            }
-            urlSession.resume()
+    func caffeineSum() -> Int {
+        var value = 0
+        for index in drunks {
+            value += index.caffeineLevel
         }
+        return value
     }
 
-    func beverages() -> [Beverage] {
-        if bevs.isEmpty, let localData = readLocalFile(name: "beverage"), let options = parseJSON(jsonData: localData) {
-            bevs = options.beverages
-            return options.beverages
-        } else {
-            return bevs
-        }
+    func quantitySum(_ beverage: inout Beverage) {
+        beverage.quantity += 1
+    }
+
+    func quantityDec(_ beverage: inout Beverage) {
+        beverage.quantity -= 1
     }
 }

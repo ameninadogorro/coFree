@@ -4,49 +4,57 @@
             "image": "green-tea-2",
             "name":"Chá de Menta",
             "caffeineLevel": 40,
-            "mililiters": 250
+            "mililiters": 250,
+            "quantity": 0
         },
         {
             "image": "chocolate-bar",
             "name":"Chocolate",
             "caffeineLevel": 70,
-            "mililiters": 200
+            "mililiters": 200,
+            "quantity": 0
         },
         {
             "image": "coffee-beans",
             "name":"Café",
             "caffeineLevel": 80,
-            "mililiters": 250
+            "mililiters": 250,
+            "quantity": 0
         },
         {
             "image": "black-tea",
             "name": "Chá Preto",
             "caffeineLevel": 42,
-            "mililiters": 200
+            "mililiters": 200,
+            "quantity": 0
         },
         {
             "image": "green-tea",
             "name":"Chá Verde",
             "caffeineLevel": 45,
-            "mililiters": 200
+            "mililiters": 200,
+            "quantity": 0
         },
         {
             "image": "energy-can",
             "name":"Energético",
             "caffeineLevel": 170,
-            "mililiters": 473
+            "mililiters": 473,
+            "quantity": 0
         },
         {
             "image": "yerba-tea",
             "name":"Chá Mate",
             "caffeineLevel": 64,
-            "mililiters": 200
+            "mililiters": 200,
+            "quantity": 0
         },
         {
             "image": "kombucha",
             "name":"Kombucha",
             "caffeineLevel": 24,
-            "mililiters": 200
+            "mililiters": 200,
+            "quantity": 0
         },
     ]
 }

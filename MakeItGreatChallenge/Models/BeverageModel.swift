@@ -4,10 +4,11 @@ struct Options: Codable {
     let beverages: [Beverage]
 }
 
-struct Beverage: Codable {
-    let name, image: String
-    let caffeineLevel: Int
-    let mililiters: Int
+struct Beverage: Codable, Equatable {
+    var name, image: String
+    var caffeineLevel: Int
+    var mililiters: Int
+    var quantity: Int
 
     var caffeineIngested: Int = 0
 
@@ -16,5 +17,6 @@ struct Beverage: Codable {
         case image
         case caffeineLevel
         case mililiters
+        case quantity
     }
 }
