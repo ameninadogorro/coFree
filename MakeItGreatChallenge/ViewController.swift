@@ -1,6 +1,9 @@
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
+
+    @AppStorage("didLaunchBefore") var didLaunchBefore: Bool = false
 
     let firstScreen = FirstScreen()
 
@@ -8,6 +11,13 @@ class ViewController: UIViewController {
 
     override func loadView() {
         self.view = firstScreen
+        if (UserDefaults.standard.value(forKey: "didLaunchBefore") != nil) == false {
+            viewModel.bevs = viewModel.beverages()
+            UserDefaults.standard.set(true, forKey: "didLaunchBefore")
+        } else {
+            viewModel.loadBevs()
+            viewModel.loadDrunk()
+        }
     }
 
     override func viewDidLoad() {

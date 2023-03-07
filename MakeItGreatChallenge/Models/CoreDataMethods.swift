@@ -82,7 +82,7 @@ func deleteConsume(date: Date, context: NSManagedObjectContext) -> Bool {
 }
 
 func printAllConsumes (context: NSManagedObjectContext) {
-    var consumes = fetchConsume(context: context)
+    let consumes = fetchConsume(context: context)
     if !consumes.isEmpty {
         for consume in consumes {
             print(consume)

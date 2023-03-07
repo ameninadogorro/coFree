@@ -4,15 +4,6 @@ class CollectionViewModel {
     var bevs: [Beverage] = []
     var drunks: [Beverage] = []
 
-    init() {
-        if FileManager().docExist(named: fileName) {
-            loadBevs()
-            loadDrunk()
-        } else {
-            self.bevs = beverages()
-        }
-    }
-
     func beverages() -> [Beverage] {
         if let localData = readLocalFile(name: "beverage"), let options = parseJSON(jsonData: localData) {
             self.bevs = options.beverages
