@@ -64,17 +64,30 @@ class ViewController: UIViewController {
             style: .done,
             target: self,
             action: #selector(goToCalendar)
+            
         )
         navigationItem.rightBarButtonItem?.tintColor = .black
         navigationItem.rightBarButtonItem?.accessibilityHint = "Clique aqui para ver seu histórico de cafeína ingerida".Localized()
+        
     }
     @objc func goToCalendar() {
 //        datePicker.isHidden.toggle()
         navigationController?.pushViewController(CalendarViewController(), animated: true)
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
     }
     @objc func returnToLastValue() {
-        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        
         undo()
+        
+        if (viewModel.bevs.map(\.caffeineIngested).reduce(0, +) == 0){
+            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+            
+        }
+        else{
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        }
+        
+        
     }
 
     func undo() {
@@ -91,6 +104,7 @@ class ViewController: UIViewController {
         //        label.accessibilityLabel = "\(label.text) Quantidade de cafeína total"
     }
 }
+
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -39,6 +39,7 @@ class CenterStackView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
 
     let minorLabel: UILabel = {
         let label = UILabel()

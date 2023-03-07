@@ -29,6 +29,7 @@
 		DD563CB229AE2438003B972B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD563CB429AE2438003B972B /* Localizable.strings */; };
 		DD563CBA29AE25E2003B972B /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD563CB929AE25E2003B972B /* SheetViewController.swift */; };
 		DD88AE4529B0E0CC00A1B549 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = DD88AE4429B0E0CC00A1B549 /* .gitattributes */; };
+		E363C40D29B1384D008A7497 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E363C40C29B1384D008A7497 /* HapticsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +73,6 @@
 		82493D16299BD2EF009BC2C7 /* ViewCodeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeConfiguration.swift; sourceTree = "<group>"; };
 		827DB24129966F61001CD39D /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		827E37DB2993CF6E0010F806 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		DD563CAA299BD8F9003B972B /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		DD563CAE29AE205F003B972B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DD563CAF29AE206D003B972B /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		DD563CB329AE2438003B972B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -82,6 +82,7 @@
 		DD563CB829AE2477003B972B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DD563CB929AE25E2003B972B /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
 		DD88AE4429B0E0CC00A1B549 /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		E363C40C29B1384D008A7497 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +147,7 @@
 				4C791EA0291406C3009FF480 /* Assets.xcassets */,
 				4C791EA2291406C3009FF480 /* LaunchScreen.storyboard */,
 				4C791EA5291406C3009FF480 /* Info.plist */,
+				E363C40C29B1384D008A7497 /* HapticsManager.swift */,
 			);
 			path = MakeItGreatChallenge;
 			sourceTree = "<group>";
@@ -376,6 +378,7 @@
 				7EA277B0293536B600AC26BD /* FirstScreen.swift in Sources */,
 				7EA277AA293532A100AC26BD /* Extensions.swift in Sources */,
 				7EA277AD293535C700AC26BD /* BeverageModel.swift in Sources */,
+				E363C40D29B1384D008A7497 /* HapticsManager.swift in Sources */,
 				827DB24229966F61001CD39D /* CalendarViewController.swift in Sources */,
 				4C791E9C291406C2009FF480 /* ViewController.swift in Sources */,
 				4C791E98291406C2009FF480 /* AppDelegate.swift in Sources */,
@@ -571,7 +574,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2D837DJ3YC;
+				DEVELOPMENT_TEAM = LUS4U4Y792;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeItGreatChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -599,7 +602,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2D837DJ3YC;
+				DEVELOPMENT_TEAM = LUS4U4Y792;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeItGreatChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
