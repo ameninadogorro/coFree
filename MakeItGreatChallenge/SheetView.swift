@@ -1,6 +1,6 @@
 import UIKit
 
-class SheetViewController: UIViewController {
+class SheetView: UIView {
 
     private let weekDays: UILabel = {
         let label = UILabel()
@@ -43,16 +43,16 @@ class SheetViewController: UIViewController {
         return label
     }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = UIColor(named: "background")
-        navigationItem.title = "Consumo diário".Localized()
-        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 0.76, green: 0.71, blue: 0.66, alpha: 1.00)
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.backgroundColor = UIColor(named: "background")
+        self.largeContentTitle = "Consumo diário".Localized()
+//        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 0.76, green: 0.71, blue: 0.66, alpha: 1.00)
 
-        view.addSubview(weekDays)
-        view.addSubview(caffeineAmount)
-        view.addSubview(lastLabel)
-        view.addSubview(imageView)
+        addSubview(weekDays)
+        addSubview(caffeineAmount)
+        addSubview(lastLabel)
+        addSubview(imageView)
 
         weekDays.translatesAutoresizingMaskIntoConstraints = false
         caffeineAmount.translatesAutoresizingMaskIntoConstraints = false
@@ -61,22 +61,22 @@ class SheetViewController: UIViewController {
 
 
         NSLayoutConstraint.activate([
-            weekDays.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            weekDays.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            weekDays.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.15),
-            weekDays.widthAnchor.constraint(equalTo: view.widthAnchor),
+            weekDays.centerXAnchor.constraint(equalTo: centerXAnchor),
+            weekDays.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            weekDays.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.15),
+            weekDays.widthAnchor.constraint(equalTo: widthAnchor),
 
 
-            caffeineAmount.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            caffeineAmount.centerXAnchor.constraint(equalTo: centerXAnchor),
             caffeineAmount.topAnchor.constraint(equalTo: weekDays.bottomAnchor),
 
-            lastLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            lastLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             lastLabel.topAnchor.constraint(equalTo: caffeineAmount.bottomAnchor),
 
             imageView.topAnchor.constraint(equalTo: lastLabel.bottomAnchor),
-            imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+            imageView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            imageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
         ])
 
 
