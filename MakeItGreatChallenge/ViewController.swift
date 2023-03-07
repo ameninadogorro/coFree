@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     }
 
     @objc func goToCalendar() {
-        navigationController?.pushViewController(CalendarViewController(), animated: true)
+        navigationController?.pushViewController(CalendarViewController(value: viewModel.caffeineSum()), animated: true)
     }
     @objc func returnToLastValue() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()

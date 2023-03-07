@@ -2,7 +2,9 @@ import UIKit
 
 class CalendarViewController: UIViewController {
 
-    let sheet = SheetView()
+    var value: Int
+
+    var sheet: SheetView?
 
     private lazy var datePicker : UIDatePicker = {
         var date = UIDatePicker(frame: .zero)
@@ -11,19 +13,29 @@ class CalendarViewController: UIViewController {
         date.datePickerMode = .date
         date.translatesAutoresizingMaskIntoConstraints = false
         date.layer.cornerRadius = 20
+        date.locale = .current
         date.layer.masksToBounds = true
         return date
     }()
 
+    init(value: Int) {
+        self.value = value
+        self.sheet = SheetView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), value)
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func loadView() {
-        title = "Calendar"
+        title = "Calendário".Localized()
         super.loadView()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         applyViewCode()
-        datePicker.addTarget(self, action: #selector(changed), for: .touchUpOutside)
+        datePicker.addTarget(self, action: #selector(changed), for: .valueChanged)
     }
 
     @objc func changed() {
