@@ -48,7 +48,7 @@ class SheetView: UIView {
     init(frame: CGRect, _ caffeine: Int) {
         self.caffeineLevel = caffeine
         super.init(frame: frame)
-        caffeineAmount.text = String(caffeine)+" ml".Localized()
+        caffeineAmount.text = String(caffeine).Localized()
     }
 
     required init?(coder: NSCoder) {
