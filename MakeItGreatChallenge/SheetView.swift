@@ -27,7 +27,7 @@ class SheetView: UIView {
         let label = UILabel()
         label.text = "123".Localized()
         label.textAlignment = .center
-        label.font = UIFont.preferredFont(forTextStyle: .title1)
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         label.adjustsFontForContentSizeCategory = true
         label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -38,9 +38,10 @@ class SheetView: UIView {
         let label = UILabel()
         label.text = "Cafeína Ingerida".Localized()
         label.textAlignment = .center
-        label.font = UIFont.preferredFont(forTextStyle: .title2)
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         label.adjustsFontForContentSizeCategory = true
-        label.numberOfLines = 2
+        label.numberOfLines = 3
+//        label.clipsToBounds = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -48,7 +49,7 @@ class SheetView: UIView {
     init(frame: CGRect, _ caffeine: Int) {
         self.caffeineLevel = caffeine
         super.init(frame: frame)
-        caffeineAmount.text = String(caffeine).Localized()
+        caffeineAmount.text = "\(String(caffeine)) ml".Localized()
     }
 
     required init?(coder: NSCoder) {
@@ -80,13 +81,19 @@ class SheetView: UIView {
 
             caffeineAmount.bottomAnchor.constraint(equalTo: lastLabel.topAnchor),
             caffeineAmount.topAnchor.constraint(equalTo: weekDays.bottomAnchor),
-            caffeineAmount.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5),
+//            caffeineAmount.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.3),
             caffeineAmount.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1),
             caffeineAmount.centerXAnchor.constraint(equalTo: centerXAnchor),
+            caffeineAmount.trailingAnchor.constraint(equalTo: trailingAnchor),
+            caffeineAmount.leadingAnchor.constraint(equalTo: leadingAnchor),
 
             lastLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             lastLabel.topAnchor.constraint(equalTo: caffeineAmount.bottomAnchor),
-            lastLabel.heightAnchor.constraint(equalTo: caffeineAmount.heightAnchor, multiplier: 1),
+            lastLabel.heightAnchor.constraint(equalTo: caffeineAmount.heightAnchor, multiplier: 1.5),
+//            lastLabel.widthAnchor.constraint(equalTo: caffeineAmount.widthAnchor, multiplier: 1),
+            lastLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            lastLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            lastLabel.bottomAnchor.constraint(equalTo: imageView.topAnchor),
 
             imageView.topAnchor.constraint(equalTo: lastLabel.bottomAnchor),
             imageView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),

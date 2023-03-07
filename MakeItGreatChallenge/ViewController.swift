@@ -73,7 +73,7 @@ class ViewController: UIViewController {
 
     func reloadView() {
         firstScreen.collection.reloadData()
-        firstScreen.stackView.caffeineLevelLabel.text = String(describing: viewModel.caffeineSum())
+        firstScreen.stackView.caffeineLevelLabel.text = String(describing: viewModel.caffeineSum()) + " ml"
         firstScreen.stackView.caffeineLevelLabel.accessibilityLabel = "\(firstScreen.stackView.caffeineLevelLabel.text ?? "Erro") " + "de cafeína ingerida hoje".Localized()
 
         viewModel.saveBevs()
